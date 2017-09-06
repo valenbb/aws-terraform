@@ -1,5 +1,4 @@
 provider "aws" {}
-}
 
 resource "aws_instance" "test" {
   ami           = "ami-4fffc834"
@@ -8,7 +7,7 @@ resource "aws_instance" "test" {
 
 tags {
     Name = "test"
-  }
+}
 
 security_groups = ["sg-ccc943b0"]
 availability_zone = "us-east-1b"
