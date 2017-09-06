@@ -8,7 +8,7 @@ resource "aws_instance" "test" {
     Name = "test"
   }
 
-  security_groups = ["sg-ccc943b0"]
+  security_groups = ["sg-d53b20b0"]
   availability_zone = "us-east-1b"
   subnet_id = "subnet-adbc6cf4"
 
