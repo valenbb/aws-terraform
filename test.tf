@@ -12,21 +12,21 @@ resource "aws_security_group" "test_sg" {
     from_port	= 22
     to_port	= 22
     protocol	= "tcp"
-    cidr_blocks	= "${var.cidr_access}"
+    cidr_blocks	= "${var.ssh_cidr_access}"
   }
   
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = "${var.cidr_access}"
+    cidr_blocks = "${var.web_cidr_access}"
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = "${var.cidr_access}"
+    cidr_blocks = "${var.web_cidr_access}"
   }
   
   egress {
