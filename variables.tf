@@ -32,7 +32,7 @@ variable "subnet_id" {
 variable "ssh_cidr_access" {
   type = "list"
   description = "CIDR of originating traffic"
-  default = ["10.0.1.244", "100.4.210.205/32", "165.225.38.216/32"]
+  default = ["10.0.1.244/32", "100.4.210.205/32", "165.225.38.216/32"]
 }
 
 variable "web_cidr_access" {
