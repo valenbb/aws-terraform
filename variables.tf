@@ -26,7 +26,7 @@ variable "vpc_prod_id" {
 
 variable "subnet_id" {
   description = "Subnet ID to use"
-  default = "subnet-2a26b260"
+  default = "subnet-07f4345b"
 }
 
 variable "cidr_access" {
@@ -37,7 +37,7 @@ variable "cidr_access" {
 
 variable "az_id" {
   description = "Availability Zone"
-  default = "us-east-1a"
+  default = "us-east-1b"
 }
 
 variable "public_ip" {
