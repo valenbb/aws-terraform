@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "test_sg" {
-  name 		= "{var.tag_name}-SG"
+  name 		= "${var.tag_name}-SG"
   description 	= "Allow inbound traffic from home only"
   vpc_id      	= "${var.vpc_prod_id}"
 
