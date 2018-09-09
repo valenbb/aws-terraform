@@ -44,7 +44,7 @@ resource "aws_security_group" "test_sg" {
   }
 }
 
-resource "aws_instance" "chef_server" {
+resource "aws_instance" "test_server" {
   ami           		= "${var.aws_ami}"
   instance_type 		= "${var.instance_type}"
   vpc_security_group_ids 	= ["${aws_security_group.test_sg.id}"]
@@ -64,7 +64,7 @@ resource "aws_instance" "chef_server" {
     connection {
       type = "${var.connection_type}"
       user = "${var.server_user}"
-      private_key = "${file(var.ssh_key_file)}"
+      private_key = "${file(var.ssh_key_filename)}"
     }
     environment = "${var.chef_environment}"
     run_list = "${var.run_list}"
