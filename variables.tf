@@ -108,6 +108,6 @@ variable "chef_environment" {
 }
 
 variable "connection_type" {
-  description "Connection to server"
+  description = "protocol to connect to AWS server"
   default = "ssh"
 }
