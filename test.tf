@@ -75,5 +75,12 @@ resource "aws_instance" "test_server" {
     user_key = "${file(var.chef_server_user_key)}"
     ssl_verify_mode = "${var.ssl_verify_mode}"
   }
+  
+  
+  terraform {
+    backend "local" {
+      path = "${var.local_backend}"
+    }
+  }
 }
 

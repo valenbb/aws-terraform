@@ -117,3 +117,9 @@ variable "connection_type" {
   description = "protocol to connect to AWS server"
   default = "ssh"
 }
+
+variable "local_backend" {
+  description "Use local disk to store terraform state file so that destroy command can be run anytime"
+  default = "/var/lib/jenkins/terraform_states"
+}
+
