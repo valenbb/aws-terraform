@@ -8,7 +8,7 @@ variable "instance_type" {
   default = "t2.medium"
 }
 
-# CentOS 7 AMI
+# CentOS-7 AMI
 variable "aws_ami" {
   description = "Image Id"
   default = "ami-0eaf7f3ca4d177abb"
@@ -48,7 +48,7 @@ variable "az_id" {
 
 variable "public_ip" {
   description = "Associate ec2 instance wth Public IP"
-  default = false
+  default = true
 }
 
 variable "tag_name" {
