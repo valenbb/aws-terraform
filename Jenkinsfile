@@ -7,7 +7,7 @@ node {
     	}
 
 	stage('Terraform Init') {
-	    sh 'terraform init -input=false'
+	    sh 'terraform init -input=false -force-copy -reconfigure'
 	}
 
 	stage('Terraform Plan') {
