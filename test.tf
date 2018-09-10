@@ -79,7 +79,7 @@ resource "aws_instance" "test_server" {
   
 terraform {
   backend "local" {
-    path = "${var.local_backend}"
+    path = "/var/lib/jenkins/terraform_states"
   }
 }
 
