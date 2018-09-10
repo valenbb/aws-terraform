@@ -76,11 +76,3 @@ resource "aws_instance" "test_server" {
     ssl_verify_mode = "${var.ssl_verify_mode}"
   }
 }  
-  
-terraform {
-  backend "local" {
-    path = "/var/lib/jenkins/terraform_states"
-  }
-}
-
-

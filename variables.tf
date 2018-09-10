@@ -117,8 +117,3 @@ variable "connection_type" {
   description = "protocol to connect to AWS server"
   default = "ssh"
 }
-
-variable "local_backend" {
-  description = "use another location on local disk"
-  default = "/var/lib/jenkins/terraform_states"
-}
