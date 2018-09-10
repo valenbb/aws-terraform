@@ -119,7 +119,6 @@ variable "connection_type" {
 }
 
 variable "local_backend" {
-  description "Use local disk to store terraform state file so that destroy command can be run anytime"
+  description = "use another location on local disk"
   default = "/var/lib/jenkins/terraform_states"
 }
-
