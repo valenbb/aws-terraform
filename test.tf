@@ -64,7 +64,7 @@ resource "aws_instance" "test_server" {
     connection {
       type = "${var.connection_type}"
       user = "${var.server_user}"
-      private_key = "${file(var.ssh_key_filename)}"
+      private_key = "${file("${var.ssh_key_filename}")}"
     }
     environment = "${var.chef_environment}"
     run_list = "${var.run_list}"
