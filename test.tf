@@ -62,17 +62,18 @@ resource "aws_instance" "test_server" {
 
   provisioner "chef"  {
     connection {
-      type = "${var.connection_type}"
-      user = "${var.server_user}"
-      private_key = "${file("${var.ssh_key_filename}")}"
+      type 		= "${var.connection_type}"
+      user	 	= "${var.server_user}"
+      private_key 	= "${file("${var.ssh_key_filename}")}"
     }
-    environment = "${var.chef_environment}"
-    run_list = "${var.run_list}"
-    node_name = "${var.tag_name}-${var.tag_env}"
-    server_url = "${var.chef_server_url}"
-    recreate_client = true
-    user_name = "${var.chef_server_user_name}"
-    user_key = "${file(var.chef_server_user_key)}"
-    ssl_verify_mode = "${var.ssl_verify_mode}"
+    environment 	= "${var.chef_environment}"
+    run_list 		= "${var.run_list}"
+    node_name 		= "${var.tag_name}-${var.tag_env}"
+    server_url 		= "${var.chef_server_url}"
+    recreate_client 	= true
+    user_name 		= "${var.chef_server_user_name}"
+    user_key 		= "${file(var.chef_server_user_key)}"
+    version         	= "12.4.1"
+    ssl_verify_mode 	= "${var.ssl_verify_mode}"
   }
 }  

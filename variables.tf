@@ -74,7 +74,7 @@ variable "tag_builder" {
 
 variable "chef_server_url" {
   description = "Chef Server URL"
-  default = "https://10.0.1.244/organizations/esn2"
+  default = "https://10.0.1.244/organizations/rmt"
 }
 
 variable "chef_server_user_name" {
@@ -116,4 +116,9 @@ variable "chef_environment" {
 variable "connection_type" {
   description = "protocol to connect to AWS server"
   default = "ssh"
+}
+
+variable "chef_client" {
+  description = "chef client to install on node"
+  default = "13.8.5"
 }
